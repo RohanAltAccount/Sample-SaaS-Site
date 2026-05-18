@@ -3,8 +3,27 @@ import "../styles/global.css";
 import { MacbookScrollDemo } from "../components/macbook-scroll-demo";
 ---
 
-<h1 class="w-full text-center text-7xl md:text-1xl italic font-black font-dmsans text-white bg-zinc-900 py-10 tracking-tight"> Flowstice </h1>
+<html lang="en">
+  <body class="bg-zinc-900">
 
-<MacbookScrollDemo client:load />
+    <h1 class="w-full text-center text-7xl italic font-black font-dmsans bg-zinc-900 text-white py-10 tracking-tight">
+      Flowstice
+    </h1>
 
-<button id="my-button" class="btn">Click Me</button>
+    <MacbookScrollDemo client:load />
+
+    <div class="w-full flex justify-center py-20">
+      <button
+        id="btn"
+        class="bg-black text-white px-6 py-3 rounded-xl font-dmsans"
+      >
+        Click me
+      </button>
+    </div>
+
+    <script>
+      import "../scripts/main.ts";
+    </script>
+
+  </body>
+</html>

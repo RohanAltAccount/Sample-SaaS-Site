@@ -100,7 +100,7 @@ className="flex min-h-[200vh] shrink-0 scale-[0.35] transform flex-col items-cen
         translate={translate}
       />
       {/* Base area */}
-      <div className="relative -z-10 h-[22rem] w-[32rem] overflow-hidden rounded-2xl bg-gray-200 dark:bg-[#272729]">
+      <div className="relative -z-10 h-[22rem] w-[32rem] overflow-hidden rounded-2xl bg-black dark:bg-[#272729]">
         {/* above keyboard bar */}
         <div className="relative h-10 w-full">
           <div className="absolute inset-x-0 mx-auto h-4 w-[80%] bg-[#050505]" />

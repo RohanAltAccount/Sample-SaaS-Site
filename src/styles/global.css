@@ -16,3 +16,10 @@ h1 {
   cursor: default;
 }
 
+
+button {
+  border-radius: 3px
+  cursor: pointer;
+
+}
+
