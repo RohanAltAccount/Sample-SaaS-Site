@@ -2,7 +2,7 @@ import { MacbookScroll } from "@/components/ui/macbook-scroll";
 
 export function MacbookScrollDemo() {
   return (
-    <div className="-mt-32 w-full overflow-hidden bg-zinc-900 dark:bg-[#0B0B0F]">
+<div className="w-full overflow-hidden bg-zinc-900 dark:bg-[#0B0B0F]">
       <MacbookScroll
         title={
   <span className="text-4xl font-bold text-white dark:text-white">
