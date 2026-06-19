@@ -6,7 +6,7 @@ export function MacbookScrollDemo() {
       <MacbookScroll
         title={
   <span className="text-4xl font-bold text-white dark:text-white">
-    All your freelancing. <br /> All in one place.
+    Modern Templates For Your SaaS Site. <br /> For Free.
   </span>
 }
         badge={

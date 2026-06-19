@@ -17,6 +17,11 @@ import Navbar from "../components/Navbar.tsx";
     will-change: transform;
     z-index: 9999;
     contain: layout paint style;
+    transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  html, body, * {
+   cursor: none !important;
   }
 
   @media (pointer: coarse) {
@@ -30,7 +35,7 @@ import Navbar from "../components/Navbar.tsx";
     <div class="cursor-follower" aria-hidden="true"></div>
     <Navbar />
     <h1 class="w-full text-center text-7xl italic font-black font-dmsans bg-zinc-900 text-white py-10 tracking-tight">
-      Flowstice
+      Templately
     </h1>
 
     <MacbookScrollDemo client:load />
