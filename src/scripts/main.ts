@@ -1,31 +1,45 @@
-const btn = document.getElementById("btn") as HTMLButtonElement | null;
+const pressables = document.querySelectorAll<HTMLElement>(".pressable");
 
-btn?.addEventListener("click", () => {
-  alert("clicked");
+pressables.forEach((element) => {
+  element.addEventListener("pointerdown", (event) => {
+    const rect = element.getBoundingClientRect();
+    const ripple = document.createElement("span");
+    const size = Math.max(rect.width, rect.height);
+
+    ripple.className = "ripple";
+    ripple.style.width = `${size}px`;
+    ripple.style.height = `${size}px`;
+    ripple.style.left = `${event.clientX - rect.left}px`;
+    ripple.style.top = `${event.clientY - rect.top}px`;
+
+    element.append(ripple);
+    ripple.addEventListener("animationend", () => ripple.remove(), {
+      once: true,
+    });
+  });
 });
 
-const follower = document.querySelector(".cursor-follower") as HTMLDivElement | null;
+const revealTargets = document.querySelectorAll<HTMLElement>("[data-reveal]");
 
-if (follower) {
-  let x = -100;
-  let y = -100;
-  let frame = 0;
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
 
-  const moveFollower = () => {
-    frame = 0;
-    follower.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-  };
-
-  document.addEventListener(
-    "pointermove",
-    (event) => {
-      x = event.clientX;
-      y = event.clientY;
-
-      if (frame === 0) {
-        frame = requestAnimationFrame(moveFollower);
-      }
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
     },
-    { passive: true },
+    {
+      threshold: 0.18,
+      rootMargin: "0px 0px -8% 0px",
+    },
   );
+
+  revealTargets.forEach((target) => revealObserver.observe(target));
+} else {
+  revealTargets.forEach((target) => target.classList.add("is-visible"));
 }
