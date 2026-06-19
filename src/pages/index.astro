@@ -3,9 +3,31 @@ import "../styles/global.css";
 import { MacbookScrollDemo } from "../components/macbook-scroll-demo";
 import Navbar from "../components/Navbar.tsx";
 ---
+<style>
+  .cursor-follower {
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: 9999px;
+    pointer-events: none;
+    transform: translate3d(-100px, -100px, 0);
+    will-change: transform;
+    z-index: 9999;
+    contain: layout paint style;
+  }
 
+  @media (pointer: coarse) {
+    .cursor-follower {
+      display: none;
+    }
+  }
+</style>
 <html lang="en">
   <body class="bg-zinc-900">
+    <div class="cursor-follower" aria-hidden="true"></div>
     <Navbar />
     <h1 class="w-full text-center text-7xl italic font-black font-dmsans bg-zinc-900 text-white py-10 tracking-tight">
       Flowstice
@@ -24,6 +46,30 @@ import Navbar from "../components/Navbar.tsx";
 
     <script>
       import "../scripts/main.ts";
+
+      const cursorFollower = document.querySelector(".cursor-follower");
+
+      if (cursorFollower instanceof HTMLElement) {
+        let pointerX = -100;
+        let pointerY = -100;
+        let frame = 0;
+
+        window.addEventListener(
+          "pointermove",
+          (event) => {
+            pointerX = event.clientX;
+            pointerY = event.clientY;
+
+            if (!frame) {
+              frame = requestAnimationFrame(() => {
+                cursorFollower.style.transform = `translate3d(${pointerX}px, ${pointerY}px, 0)`;
+                frame = 0;
+              });
+            }
+          },
+          { passive: true }
+        );
+      }
     </script>
 <section class="relative min-h-screen overflow-hidden bg-[#0b0b0f] text-white">
   <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(255,255,255,0.12),transparent_35%)]" />
