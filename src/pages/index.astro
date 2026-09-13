@@ -9,77 +9,84 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Templately is a free SaaS landing page template made by Rohan Modi for any digital company, with polished placeholder sections and filler copy ready to customize."
+      content="Templately is a free SaaS landing page template made for any digital company, with polished placeholder sections and filler copy ready to customize."
     />
     <title>Templately | Free SaaS landing page template</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <header class="site-header" data-reveal>
-      <div class="brand" aria-label="Templately">
+      <a class="brand" href="#" aria-label="Templately home">
         <span class="brand-mark" aria-hidden="true">T</span>
         <span>Templately</span>
-      </div>
+      </a>
 
       <nav class="site-nav" aria-label="Main navigation">
-        <button class="nav-link pressable" type="button">Click me</button>
-        <button class="nav-link pressable" type="button">Click me</button>
-        <button class="nav-link pressable" type="button">Click me</button>
-        <button class="nav-link pressable" type="button">Click me</button>
+        <button class="nav-link pressable" type="button">Product</button>
+        <button class="nav-link pressable" type="button">Solutions</button>
+        <button class="nav-link pressable" type="button">Resources</button>
+        <button class="nav-link pressable" type="button">Company</button>
       </nav>
 
       <div class="header-actions">
-        <button class="ghost-button pressable" type="button">Click me</button>
-        <button class="primary-button pressable" type="button">Click me</button>
+        <button class="ghost-button pressable" type="button">Log in</button>
+        <button class="primary-button pressable" type="button">Get started</button>
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="hero-section" aria-labelledby="hero-title">
         <div class="hero-copy" data-reveal>
           <p class="eyebrow">Free SaaS landing page template</p>
-          <h1 id="hero-title">Templately</h1>
+          <h1 id="hero-title">A sharper foundation for your next digital company.</h1>
           <p class="hero-lede">
-            Templately is a free SaaS template made by Rohan Modi. It gives any
-            digital company a modern landing page foundation with polished
-            sections, responsive layouts, and easy-to-replace filler text.
+            Templately is a free SaaS template created by me, Rohan Modi (@RohanAltAccount). It gives any
+            digital company a composed landing page foundation with responsive
+            layouts, reusable sections, and easy-to-replace copy.
           </p>
 
           <div class="hero-actions" aria-label="Primary actions">
             <button class="primary-button large pressable" type="button">
-              Click me
+              Get started
             </button>
             <button class="secondary-button large pressable" type="button">
-              Click me
+              View sections
             </button>
           </div>
-
-          <dl class="hero-stats" aria-label="Templately template highlights">
-            <div>
-              <dt>Free</dt>
-              <dd>template starter</dd>
-            </div>
-            <div>
-              <dt>100%</dt>
-              <dd>responsive layout</dd>
-            </div>
-            <div>
-              <dt>Any</dt>
-              <dd>digital company</dd>
-            </div>
-          </dl>
         </div>
 
-        <figure class="hero-dashboard">
+        <figure class="hero-dashboard" data-reveal style="--delay: 80ms">
+          <div class="image-meta" aria-hidden="true">
+            <span>Template preview</span>
+            <span>01 / 05</span>
+          </div>
           <img
             src="/linear.png"
             alt="Templately template dashboard preview with SaaS-style metric cards and project rows."
             loading="eager"
           />
         </figure>
+
+        <dl class="hero-stats" aria-label="Templately template highlights" data-reveal style="--delay: 120ms">
+          <div>
+            <dt>Free</dt>
+            <dd>Template starter</dd>
+          </div>
+          <div>
+            <dt>100%</dt>
+            <dd>Responsive layout</dd>
+          </div>
+          <div>
+            <dt>Any</dt>
+            <dd>Digital company</dd>
+          </div>
+        </dl>
       </section>
 
-      <section class="logo-strip" aria-label="Trusted companies">
+      <section class="logo-strip" aria-label="Example company row">
         <div class="section-inner logo-row" data-reveal>
+          <span class="strip-label">Built to adapt</span>
           <span>Placeholder</span>
           <span>Startup Co.</span>
           <span>Digital Lab</span>
@@ -91,70 +98,58 @@ import "../styles/global.css";
       <section class="section feature-section" aria-labelledby="features-title">
         <div class="section-inner">
           <div class="section-heading" data-reveal>
-            <p class="eyebrow">Template sections</p>
-            <h2 id="features-title">A typical SaaS page, ready to customize.</h2>
+            <p class="eyebrow">Template system</p>
+            <h2 id="features-title">A familiar SaaS story, stripped back to what matters.</h2>
             <p>
-              Use this layout as a clean starting point for a software product,
-              agency tool, AI platform, analytics app, or any digital company
-              that needs a polished landing page.
+              Use this layout as a starting point for a software product, agency
+              tool, AI platform, analytics app, or any digital company that needs
+              a polished page without visual noise.
             </p>
           </div>
 
-          <div class="feature-grid">
+          <div class="feature-grid" aria-label="Included template sections">
             <article class="feature-card" data-reveal style="--delay: 40ms">
-              <span class="feature-mark" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img">
-                  <path d="M5 12h14M12 5v14" />
-                </svg>
-              </span>
-              <h3>Hero section</h3>
-              <p>
-                A strong above-the-fold area with a product-style headline,
-                placeholder description, metric chips, and a visual dashboard
-                preview for instant SaaS polish.
-              </p>
+              <span class="feature-index">01</span>
+              <div>
+                <h3>Hero section</h3>
+                <p>
+                  A strong above-the-fold area with a clear headline, concise
+                  description, focused actions, proof metrics, and a product visual.
+                </p>
+              </div>
             </article>
 
-            <article class="feature-card accent-mint" data-reveal style="--delay: 90ms">
-              <span class="feature-mark" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img">
-                  <path d="M4 17l5-5 4 4 7-9" />
-                  <path d="M15 7h5v5" />
-                </svg>
-              </span>
-              <h3>Feature cards</h3>
-              <p>
-                Swap this filler copy with your own benefits. Lorem ipsum dolor
-                sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-              </p>
+            <article class="feature-card" data-reveal style="--delay: 90ms">
+              <span class="feature-index">02</span>
+              <div>
+                <h3>Reusable content</h3>
+                <p>
+                  Replace the filler copy with benefits, outcomes, use cases, and
+                  proof points without rebuilding the underlying structure.
+                </p>
+              </div>
             </article>
 
-            <article class="feature-card accent-sun" data-reveal style="--delay: 140ms">
-              <span class="feature-mark" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img">
-                  <path d="M4 7h16M4 12h10M4 17h7" />
-                  <path d="M17 14l3 3-3 3" />
-                </svg>
-              </span>
-              <h3>Responsive layout</h3>
-              <p>
-                The page adapts from desktop to mobile with flexible sections,
-                readable type, and stable spacing for a modern SaaS experience.
-              </p>
+            <article class="feature-card" data-reveal style="--delay: 140ms">
+              <span class="feature-index">03</span>
+              <div>
+                <h3>Responsive layout</h3>
+                <p>
+                  The page adapts from broad desktop compositions to focused mobile
+                  reading with stable spacing and readable type.
+                </p>
+              </div>
             </article>
 
-            <article class="feature-card accent-rose" data-reveal style="--delay: 190ms">
-              <span class="feature-mark" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img">
-                  <path d="M6 4h12v16H6z" />
-                  <path d="M9 8h6M9 12h6M9 16h3" />
-                </svg>
-              </span>
-              <h3>Reusable copy</h3>
-              <p>
-                Replace headings, stats, pricing, and testimonials with your own
-                company details when turning the template into a live website.
-              </p>
+            <article class="feature-card" data-reveal style="--delay: 190ms">
+              <span class="feature-index">04</span>
+              <div>
+                <h3>Launch-ready structure</h3>
+                <p>
+                  Swap in your logo, product screenshots, real evidence, and live
+                  calls to action when you are ready to ship.
+                </p>
+              </div>
             </article>
           </div>
         </div>
@@ -164,11 +159,10 @@ import "../styles/global.css";
         <div class="section-inner flow-layout">
           <div class="section-heading compact" data-reveal>
             <p class="eyebrow">Page flow</p>
-            <h2 id="flow-title">Filler content for a familiar SaaS story.</h2>
+            <h2 id="flow-title">Move from promise to proof without losing the reader.</h2>
             <p>
-              This section demonstrates how a typical SaaS landing page can
-              guide visitors from a product promise into benefits, proof, and a
-              simple call to action.
+              The page guides visitors from a clear product statement into benefits,
+              proof, and a simple next action. Each section has one job.
             </p>
           </div>
 
@@ -176,17 +170,17 @@ import "../styles/global.css";
             <article class="flow-item" data-reveal style="--delay: 60ms">
               <span>01</span>
               <h3>Introduce the product</h3>
-              <p>Use concise placeholder text to describe the value proposition.</p>
+              <p>Use direct copy to establish the value proposition and audience.</p>
             </article>
             <article class="flow-item" data-reveal style="--delay: 120ms">
               <span>02</span>
-              <h3>Show the benefits</h3>
-              <p>Add filler descriptions for features, outcomes, and use cases.</p>
+              <h3>Show the evidence</h3>
+              <p>Add real benefits, product context, outcomes, and supporting proof.</p>
             </article>
             <article class="flow-item" data-reveal style="--delay: 180ms">
               <span>03</span>
-              <h3>Invite interaction</h3>
-              <p>Keep buttons as demo controls with visual click effects only.</p>
+              <h3>Invite the next step</h3>
+              <p>Keep the call to action clear, singular, and easy to understand.</p>
             </article>
           </div>
         </div>
@@ -195,26 +189,27 @@ import "../styles/global.css";
       <section class="section metrics-section" aria-labelledby="metrics-title">
         <div class="section-inner metrics-layout">
           <div class="metric-panel" data-reveal>
+            <p class="eyebrow">Template readiness</p>
             <div class="metric-head">
-              <span>Template readiness</span>
               <strong>86%</strong>
+              <span>ready to customize</span>
             </div>
             <div class="progress-track" aria-hidden="true">
               <span class="progress-fill"></span>
             </div>
             <ul>
-              <li><span></span> Hero copy placeholder added</li>
-              <li><span></span> SaaS-style sections included</li>
-              <li><span></span> Buttons use demo labels only</li>
+              <li><span>01</span> Hero copy placeholder added</li>
+              <li><span>02</span> SaaS-style sections included</li>
+              <li><span>03</span> Buttons use demo interactions only</li>
             </ul>
           </div>
 
           <div class="section-heading compact" data-reveal style="--delay: 100ms">
-            <p class="eyebrow">Made by Rohan Modi</p>
-            <h2 id="metrics-title">A free template for digital companies.</h2>
+            <p class="eyebrow">Made by Rohan Modi (@RohanAltAccount)</p>
+            <h2 id="metrics-title">A free template built to become your own.</h2>
             <p>
               Templately is intentionally generic so founders, designers, and
-              builders can adapt it quickly. Add your logo, product screenshots,
+              builders can adapt it quickly. Add your identity, product screenshots,
               real proof points, and launch-ready copy.
             </p>
           </div>
@@ -223,9 +218,10 @@ import "../styles/global.css";
 
       <section class="section pricing-section" aria-labelledby="pricing-title">
         <div class="section-inner">
-          <div class="section-heading center" data-reveal>
+          <div class="section-heading pricing-heading" data-reveal>
             <p class="eyebrow">Pricing filler</p>
-            <h2 id="pricing-title">Demo pricing cards for any SaaS.</h2>
+            <h2 id="pricing-title">Simple pricing, presented without distraction.</h2>
+            <p>Use these as structural placeholders, then replace them with your real offer.</p>
           </div>
 
           <div class="pricing-grid">
@@ -233,38 +229,50 @@ import "../styles/global.css";
               <p class="plan-name">Studio</p>
               <p class="price">$19<span>/seat</span></p>
               <p>Placeholder plan copy for startups, creators, and lean teams.</p>
-              <button class="secondary-button pressable" type="button">Click me</button>
+              <button class="secondary-button pressable" type="button">Choose Studio</button>
             </article>
             <article class="price-card featured" data-reveal style="--delay: 120ms">
-              <p class="plan-name">Scale</p>
+              <div class="plan-topline">
+                <p class="plan-name">Scale</p>
+                <span>Recommended</span>
+              </div>
               <p class="price">$49<span>/seat</span></p>
               <p>Filler text for growing teams that want a classic SaaS tier.</p>
-              <button class="primary-button pressable" type="button">Click me</button>
+              <button class="primary-button pressable" type="button">Choose Scale</button>
             </article>
             <article class="price-card" data-reveal style="--delay: 180ms">
               <p class="plan-name">Enterprise</p>
               <p class="price">Custom</p>
               <p>Generic enterprise copy for larger companies and custom needs.</p>
-              <button class="secondary-button pressable" type="button">Click me</button>
+              <button class="secondary-button pressable" type="button">Contact sales</button>
             </article>
           </div>
         </div>
       </section>
 
       <section class="final-cta" aria-labelledby="cta-title">
-        <div class="section-inner" data-reveal>
+        <div class="section-inner final-cta-grid" data-reveal>
           <p class="eyebrow">Templately</p>
           <h2 id="cta-title">Use this free SaaS template for your next digital company.</h2>
-          <button class="primary-button large pressable" type="button">
-            Click me
-          </button>
+          <div>
+            <p>
+              Replace the placeholders with real evidence and make the system yours.
+            </p>
+            <button class="inverse-button large pressable" type="button">
+              Get started
+            </button>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Templately</span>
-      <span>A free SaaS landing page template made by Rohan Modi.</span>
+      <div class="footer-brand">
+        <span class="brand-mark inverse" aria-hidden="true">T</span>
+        <span>Templately</span>
+      </div>
+      <span>A free SaaS landing page template created by Rohan Modi (@RohanAltAccount).</span>
+      <span>Built for clear products and real proof.</span>
     </footer>
 
     <script>
